@@ -19,7 +19,6 @@
       while(count) {
         for (let i = 0; i < count; i++) {
           if (arr[i] > arr[i+1]) {
-            console.log(arr);
             let temp = arr[i];
             arr[i] = arr[i+1];
             arr[i+1] = temp;

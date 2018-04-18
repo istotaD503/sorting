@@ -1,4 +1,11 @@
 describe('Bubble Sort', function() {
+    beforeEach(function() {
+        spyOn(window, 'swap').and.callThrough();
+        // we can generate an array inside the loop
+        // create 'it' function on every iteration of the loop
+        // check the output against native JS .sorted function
+
+    });
     it('handles an empty array', function() {
       expect( bubbleSort([]) ).toEqual( [] );
     });
@@ -8,9 +15,6 @@ describe('Bubble Sort', function() {
     it('sorts from smallest to largest', function() { //
       expect( bubbleSort( [4,2,9,20]) ).toEqual( [2,4,9,20] );
       expect( bubbleSort( [-3,10,-5,0,5,-40] ) ).toEqual( [-40,-5,-3,0,5,10] );
-    });
-    beforeEach(function() {
-      spyOn(window, 'swap').and.callThrough();
     });
     it('swap a simple array', function() {
       // spyOn(window, 'swap').and.callThrough();
